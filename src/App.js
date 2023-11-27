@@ -1,8 +1,11 @@
-import Header from "./components/Component/header";
+import './App.scss';
+import logo from "./assets/images/BrainFlix-logo.svg";
+import userPic from "./assets/images/Mohan-muruge.jpg";
+import Header from "./components/header/header";
 
 function App() {
   return (
-    <Header />
+    <Header logo={logo} userPic={userPic} />
   );
 }
 
