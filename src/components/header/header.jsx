@@ -1,3 +1,4 @@
+import './_header.scss';
 
 function Header(props) {
     return (
