@@ -3,6 +3,7 @@ import addComment from '../../assets/images/icons/add_comment.svg'
 function Comments(props) {
     let key = props.currentVideoID
         const result = props.VideoDetails.find(({id}) => id === key)
+        console.log(result)
     const {comments} = result;
     let days = '';
     let unitOfTime = '';
@@ -47,11 +48,11 @@ function Comments(props) {
             <h4 className='comments__header'>{comments.length} Comments</h4>
             <form className='comments__form'>
                 <div className='comments__image-container--form'>
-                    <img src={props.userPic} alt="" className='comments__form-image' height={46} width={46}/>
+                    <img src={props.userPic} alt="" className='comments__form-image'/>
                 </div>
                 <div className='comments__form-textarea-container'>
                     <label htmlFor='newComment' className='comments__form-textarea-label'>join the conversation</label>
-                    <textarea type="text" name='newComment' placeholder='Add a new comment' className='comments__form-textarea' rows={5}></textarea>
+                    <textarea type="text" id='newComment' name='newComment' placeholder='Add a new comment' className='comments__form-textarea'></textarea>
                 </div>
                 <button type='submit' className='comments__form-button'><img src={addComment} alt='' className='comments__button-image'/>Comment</button>
             </form>

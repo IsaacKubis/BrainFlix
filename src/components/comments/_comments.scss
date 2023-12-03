@@ -7,7 +7,7 @@
 .comments {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    margin: 1rem 1rem 0rem 1rem;
     &__header {
         @include sub-header;
         font-size: 1rem;
@@ -52,7 +52,8 @@
             margin-top: 1.7rem;
             @include tablet {
                 max-width: 48px;
-                max-height: 48px;   
+                height: 48px;
+                margin-top: 1.35rem;
             }
         }
     }
@@ -65,9 +66,12 @@
         padding-bottom: 1rem;
         margin-bottom: 1rem;
         width: 100%;
+        @include tablet {
+            justify-content: baseline;
+        }
     }
     &__form-textarea-container {
-        width: 80%;
+        width: 70%;
         margin-left: 1rem;
     }
     &__form-image {
@@ -79,12 +83,14 @@
         color: $Mercury;
         @include label-button;
         font-size: .8rem;
+        display: block;
     }
     &__form-textarea {
         @include body-text;
         ::placeholder {
             color: $BrainFlix-Black;
         }
+        height: 8rem;
         color: $BrainFlix-Black;
         width: 100%;
         box-sizing:border-box;
@@ -95,6 +101,9 @@
         border-radius: 5px;
         margin-top: .5rem;
         padding: 8px;
+        @include tablet {
+            height: 46px;
+        }
     }
     &__form-button {
         width: 80%;
@@ -108,6 +117,11 @@
         margin-top: 1rem;
         @include label-button;
         font-size: .9rem;
+        @include tablet {
+            width: 20%;
+            margin-top: 1.35rem;
+            height: 46px;
+        }
     }
     &__button-image {
         float: left;
@@ -119,12 +133,18 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
+        @include tablet {
+            justify-content: space-between;
+        }
     }
     &__comment-content-container {
         width: 80%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        @include tablet {
+            width: 90%;
+        }
     }
     &__name {
         width: 60%;
