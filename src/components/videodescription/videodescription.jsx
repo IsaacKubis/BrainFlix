@@ -3,7 +3,9 @@ import likesImage from '../../assets/images/icons/likes.svg';
 
 
 function VideoDescription(props) {
-    const {title, channel, description, views, likes, timestamp} = props.result;
+    let key = props.currentVideoID;
+    const result = props.VideoDetails.find(({id}) => id === key)
+    const {title, channel, description, views, likes, timestamp} = result;
 let date = new Date(timestamp).toLocaleDateString();
     return (
         <div className="video__details">

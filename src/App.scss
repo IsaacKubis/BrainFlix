@@ -1,0 +1,7 @@
+@use './styles/partials/mixins-media' as *;
+@use './styles/partials/variables' as *;
+.flexForDesktop {
+    @include desktop {
+        display: flex;
+    }
+}

@@ -8,38 +8,96 @@
     flex-direction: column;
     &__player {
         width: 100%;
+        @include tablet {
+            box-sizing: border-box;
+            border-left: 3rem solid $BrainFlix-DarkBlack;
+            border-right: 3rem solid $BrainFlix-DarkBlack;
+        }
+        @include desktop {
+            box-sizing: border-box;
+            border-left: 12rem solid $BrainFlix-DarkBlack;
+            border-right: 12rem solid $BrainFlix-DarkBlack;
+        }
     }
     &__details{
-        margin: 1rem;
+        margin: 0 1rem;
         display: flex;
         flex-wrap: wrap;
+        @include tablet {
+            margin: 0 3rem;
+        }
+        @include desktop {
+            margin-right: 0;
+        }
     }
     &__likes-image, &__views-image {
         margin-right: .5rem;
     }
     &__title-section, &__channel-section, &__likes-section {
         border-bottom: 2px solid $Mercury;
+        @include tablet {
+            border-bottom: none;
+        }
     }
     &__channel-section, &__likes-section {
         width: 50%;
+        @include tablet {
+            display: flex;
+            border-bottom: 2px solid $Mercury;
+        }
     }
 
     &__title {
         color: $BrainFlix-Black;
         @include page-header;
+        @include tablet {
+            line-height: 0;
+            margin-top: 3rem;
+        }
     }
 
     &__channel-name {
         color: $BrainFlix-Black;
         @include sub-header;
         font-size: 1rem;
+        @include tablet {
+            margin-right: 3rem;
+            // line-height: 0;
+            font-size: 1rem;
+            margin-top: .3rem;
+        }
     }
     &__upload-date, &__views, &__likes {
         color: $Mercury;
+        @include tablet {
+            margin-top: 0;
+            margin-right: 3rem;
+            align-self: center;
+        }
+    }
+    &__views {
+        @include tablet {
+            margin-left: auto;
+        }
+    }
+    &__likes {
+        @include tablet {
+            margin-right: 0;
+        }
+        @include desktop {
+            margin-right: 2rem
+        }
+    }
+    &__likes-section {
+        @include tablet {
+        }
     }
     &__description {
         @include body-text;
         font-size: 1rem;
         color: $BrainFlix-Black;
+        @include desktop {
+            margin-right: 2rem;
+        }
     }
     }

@@ -8,6 +8,12 @@
     display: flex;
     flex-direction: column;
     margin: 1rem 1rem 0rem 1rem;
+    @include tablet {
+        margin: 1rem 3rem 0rem 3rem;
+    }
+    @include desktop {
+        margin-right: 0;
+    }
     &__header {
         @include sub-header;
         font-size: 1rem;
@@ -20,7 +26,12 @@
         border-bottom: 2px solid $Mercury;
         margin-bottom: 1rem;
     }
-    
+    &__comment-container:last-child {
+        @include desktop {
+            border-bottom: none;
+            border-right: 2px solid $Mercury;
+        }
+    }
     &__image-container {
         border-radius: 50%;
         max-width: 36px;
@@ -71,8 +82,14 @@
         }
     }
     &__form-textarea-container {
-        width: 70%;
+        width: 80%;
         margin-left: 1rem;
+        @include tablet {
+            width: 62%;
+        }
+        @include desktop {
+            width: 58%;
+        }
     }
     &__form-image {
         object-fit: cover;
@@ -104,6 +121,7 @@
         @include tablet {
             height: 46px;
         }
+        
     }
     &__form-button {
         width: 80%;
@@ -118,9 +136,12 @@
         @include label-button;
         font-size: .9rem;
         @include tablet {
-            width: 20%;
+            width: 25%;
             margin-top: 1.35rem;
             height: 46px;
+        }
+        @include desktop {
+            margin-right: 2rem;
         }
     }
     &__button-image {
@@ -136,6 +157,9 @@
         @include tablet {
             justify-content: space-between;
         }
+        @include desktop {
+            justify-content: flex-start;
+        }
     }
     &__comment-content-container {
         width: 80%;
@@ -144,6 +168,10 @@
         justify-content: space-between;
         @include tablet {
             width: 90%;
+        }
+        @include desktop {
+            margin-right: 1rem;
+            width: 80%;
         }
     }
     &__name {

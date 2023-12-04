@@ -1,4 +1,3 @@
-import VideoDescription from "./videodescription";
 import './_videoplayer.scss'
 
 function VideoPlayer(props) {
@@ -9,7 +8,6 @@ function VideoPlayer(props) {
                     <video className="video__player" key={result.id} poster={result.image} controls >
                         
                     </video>
-                    <VideoDescription result={result}/>
             </section>
         )
 }

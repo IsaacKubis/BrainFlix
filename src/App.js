@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 import Header from "./components/header/header";
 import VideoPlayer from './components/videoplayer/videoplayer';
+import VideoDescription from './components/videodescription/videodescription';
 import Comments from './components/comments/comments';
 import NextVideo from './components/nextvideos/nextvideos';
 
@@ -21,9 +22,17 @@ function App() {
   return (
     <div>
       <Header logo={logo} userPic={userPic} uploadPic={uploadPic}/>
-      <VideoPlayer VideoDetails={VideoDetails} currentVideoID={currentVideoID}/>
-      <Comments userPic={userPic} VideoDetails={VideoDetails} currentVideoID={currentVideoID}/>
-      <NextVideo VideoJson={VideoJson} currentVideoID={currentVideoID} clickHandler={clickHandler}/>
+        <VideoPlayer VideoDetails={VideoDetails} currentVideoID={currentVideoID}/>
+
+      <div className='flexForDesktop'>
+        <div>
+          <VideoDescription currentVideoID={currentVideoID} VideoDetails={VideoDetails}/>
+          <Comments userPic={userPic} VideoDetails={VideoDetails} currentVideoID={currentVideoID}/>
+        </div>
+        <div>
+          <NextVideo VideoJson={VideoJson} currentVideoID={currentVideoID} clickHandler={clickHandler}/>
+        </div>
+      </div>
     </div>
   );
 }
