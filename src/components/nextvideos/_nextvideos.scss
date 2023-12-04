@@ -1,0 +1,65 @@
+@use '../../styles//partials/mixins-colors' as *;
+@use '../../styles/partials/mixins-fonts' as *;
+@use '../../styles/partials/mixins-media' as *;
+@use '../../styles/partials/variables' as *;
+.nextVideo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+    @include tablet {
+        margin:  0 3rem;
+    }
+    @include desktop {
+        margin-left: 0;
+        margin-right: 2rem;
+        border-left: 2px solid $Mercury;
+        padding-left: 1rem;
+        width: 300px
+    }
+    &__header {
+        @include sub-header;
+        font-size: 1rem;
+        text-transform: uppercase;
+        color: $Silver;
+    }
+    &__video-container {
+        display: flex;
+        @include tablet {
+            max-width: 40%;
+        }
+        @include desktop {
+            max-width: 100%;
+        }
+    }
+    &__image-container {
+        min-width: 110px;
+        max-width: 110px;
+        height: 70px;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+    }
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+    }
+
+    &__title {
+        @include sub-header;
+        font-size: 1rem;
+        margin-top: 0;
+        color: $BrainFlix-Black;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+    &__channel {
+        @include body-text;
+        font-size: 1rem;
+        color: $BrainFlix-Black;
+    }
+}
