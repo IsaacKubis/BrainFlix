@@ -1,12 +1,7 @@
 
-import logo from "../../assets/images/BrainFlix-logo.svg";
-import userPic from "../../assets/images/Mohan-muruge.jpg";
-import uploadPic from '../../assets/images/icons/upload.svg';
 import { useEffect, useState } from 'react';
-
+import userPic from "../../assets/images/Mohan-muruge.jpg";
 import axios from 'axios';
-
-import Header from "../header/header";
 import VideoPlayer from '../videoplayer/videoplayer';
 import VideoDescription from '../videodescription/videodescription';
 import Comments from '../comments/comments';
@@ -61,7 +56,6 @@ if (!nextVideos || !currentVideo || !currentComments) {
 } else {
     return (
     <div>
-        <Header logo={logo} userPic={userPic} uploadPic={uploadPic}/>
         <VideoPlayer VideoDetails={currentVideo} />
         <div className='flexForDesktop'>
             <div>
