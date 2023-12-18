@@ -1,6 +1,5 @@
 import './_uploadpage.scss';
 import thumbNailPic from '../../assets/images/Upload-video-preview.jpg';
-import publishPic from '../../assets/images/icons/publish.svg'
 
 function uploadPage() {
     return (

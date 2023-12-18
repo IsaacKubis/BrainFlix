@@ -17,8 +17,8 @@ function HomePage() {
 
     useEffect(() => {
         fetchData();
-        console.log(id)
     }, [id]);
+
     async function fetchData() {
         await axios
         .get('https://project-2-api.herokuapp.com/videos?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
