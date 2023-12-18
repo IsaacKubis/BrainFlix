@@ -132,6 +132,9 @@
     margin-top: 1rem;
     @include label-button;
     font-size: 0.9rem;
+    background-image: url(../../assets/images/icons/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
     @include tablet {
       width: 25%;
       margin-top: 1.35rem;

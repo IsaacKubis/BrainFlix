@@ -60,10 +60,7 @@ function Comments(props) {
             className="comments__form-textarea"
           ></textarea>
         </div>
-        <button type="submit" className="comments__form-button">
-          <img src={addComment} alt="" className="comments__button-image" />
-          Comment
-        </button>
+        <button type="submit" className="comments__form-button">Comment</button>
       </form>
       {props.currentComments.map(({ id, name, comment, likes, timestamp }) => (
         <div key={id} className="comments__comment-container">

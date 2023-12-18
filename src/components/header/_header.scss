@@ -83,12 +83,12 @@
     line-height: 28px;
     @include label-button;
     font-size: 0.9rem;
-    &__img {
-      float: left;
-    }
+    background-image: url(../../assets/images/icons/upload.svg);
+    background-repeat: no-repeat;
+    background-position: 5% 50%;
     @include tablet {
-      width: 20%;
-      order: 3;
+        width: 20%;
+        order: 3;
     }
   }
 }

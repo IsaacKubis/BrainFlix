@@ -19,11 +19,11 @@ function Header(props) {
             placeholder="Search"
             />
             <button className="header__button" type="" onClick={() => navigate(`/upload`)}>
-            <img
+            {/* <img
                 src={uploadPic}
                 alt="publish img"
                 className="header__button__img"
-            />
+            /> */}
             Upload
             </button>
             <div className="header__profile-image-container">
