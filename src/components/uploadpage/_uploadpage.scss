@@ -1,0 +1,151 @@
+@use "../../styles//partials/mixins-colors" as *;
+@use "../../styles/partials/mixins-fonts" as *;
+@use "../../styles/partials/mixins-media" as *;
+@use "../../styles/partials/variables" as *;
+
+.upload {
+    border-top: 1px solid $Mercury;
+    &__header {
+        @include page-header;
+        color: $BrainFlix-Black;
+        margin-left: 1rem;
+        margin-bottom: 0;
+        margin-top: 1rem;
+        @include tablet {
+            margin-bottom: 1.5rem;
+            margin-left: 0;
+        }
+    }
+    &__header-container {
+        border-bottom: 2px solid $Mercury;
+        margin: 2rem 3rem;
+    }
+    &__form-container {
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            margin: 2rem 3rem;
+        }
+        @include desktop {
+            flex-direction: row;
+        }
+    }
+    &__description-container {
+        display: flex;
+        flex-direction: column;
+        @include tablet {
+            padding-bottom: 2rem;
+            border-bottom: 2px solid $Mercury;
+        }
+        @include desktop {
+            flex-grow: 1;
+        }
+    }
+    &__buttons-container {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem;
+        @include tablet {
+            margin: 2rem 3rem;
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+    }
+    &__thumbnail-container {
+        @include tablet {
+            width: 50%;
+        }
+        @include desktop {
+            width: 35%;
+            border-bottom: 2px solid $Mercury ;
+            padding-right: 2rem;
+            margin-top: 1rem;
+        }
+    }
+    &__thumbnail-img-container {
+        max-height: 250px;
+        @include tablet {
+            width: 50%;
+        }
+        @include tablet {
+            width: 100%;
+            max-height: 370px;
+            padding-bottom: 1rem;
+        }
+    }
+    &__thumbnail-img {
+        width: 100%;
+        max-height: 250px;
+        border-radius: 5px;
+        @include desktop {
+            max-height: 350px;
+        }
+        @include desktop {
+            max-height: 350px;
+        }
+    }
+    &__thumbnail-text {
+        margin-top: 0;
+        margin-bottom: .25rem;
+        @include label-button;
+        font-size: .75rem;
+        color: $Silver;
+        text-transform: uppercase;
+    }
+    &__label {
+        margin-top: 1rem;
+        margin-bottom: .25rem;
+        @include label-button;
+        font-size: .75rem;
+        color: $Silver;
+        text-transform: uppercase;
+    }
+    &__video-title, &__textarea {
+        border-radius: 5px;
+        border: 2px solid $Mercury;
+        background-color: $Alabaster;
+        @include body-text;
+        padding: .75rem;
+        color: $BrainFlix-Black;
+        &::placeholder {
+            color: $BrainFlix-Black;
+            //would have to add a similar line to affect all browsers i think?
+        }
+    }
+    &__publish {
+        width: 100%;
+        height: 46px;
+        background-color: $BrainFlix-Blue;
+        border: none;
+        border-radius: 5px;
+        color: $White;
+        line-height: 28px; 
+        @include label-button;
+        font-size: 0.9rem;
+        background-image: url(../../assets/images/icons/publish.svg);
+        background-repeat: no-repeat;
+        background-position: 5% 50%;
+        @include tablet {
+            order: 2;
+            width: 25%;
+        }
+    }
+    &__cancel {
+        margin-top: 1rem;
+        @include label-button;
+        font-size: 0.9rem;
+        border: none;
+        width: 100%;
+        height: 46px;
+        background-color: $White;
+        color: $BrainFlix-Blue;
+        @include tablet {
+            align-self: center;
+            margin-top: 0;
+            order: 1;
+            width: 25%;
+        }
+    }
+
+}

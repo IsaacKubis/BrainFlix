@@ -1,53 +1,53 @@
-@use './mixins-media' as *;
-@use './mixins-colors' as *;
+@use "./mixins-media" as *;
+@use "./mixins-colors" as *;
 
 @font-face {
-    font-family: 'Avenir-Bold';
-    src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format(opentype);
+  font-family: "Avenir-Bold";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format(opentype);
 }
 
 @font-face {
-    font-family: 'Avenir-Regular';
-    src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format(opentype);
+  font-family: "Avenir-Regular";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format(opentype);
 }
 
 @mixin page-header {
-    font-family: 'Avenir-Bold';
-    font-size: 1.5rem;
-    @include tablet {
-        font-size: 2.0625rem;
-        line-height: 2.75rem;
-    }
+  font-family: "Avenir-Bold";
+  font-size: 1.5rem;
+  @include tablet {
+    font-size: 2.0625rem;
+    line-height: 2.75rem;
+  }
 }
 
 @mixin section-header {
-    font-family: 'Avenir-Bold';
-    font-size: 0.75rem;
+  font-family: "Avenir-Bold";
+  font-size: 0.75rem;
 }
 
 @mixin sub-header {
-    font-family: 'Avenir-Bold';
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
-    @include tablet {
-        font-size: 0.875rem;
-    }
+  font-family: "Avenir-Bold";
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+  @include tablet {
+    font-size: 0.875rem;
+  }
 }
 
 @mixin body-text {
-    font-family: 'Avenir-Regular';
-    font-size: 0.8125rem;
-    @include tablet {
-        font-size: 0.875rem;
-        line-height: 1.375rem;
-    }
+  font-family: "Avenir-Regular";
+  font-size: 0.8125rem;
+  @include tablet {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+  }
 }
 
 @mixin label-button {
-    font-family: 'Avenir-Regular';
-    font-size: 0.625rem;
-    text-transform: uppercase;
-    @include tablet {
-        font-size: 0.75rem;
-    }
+  font-family: "Avenir-Regular";
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 0.75rem;
+  }
 }
