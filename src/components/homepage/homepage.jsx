@@ -19,16 +19,43 @@ function HomePage() {
         fetchData();
     }, [id]);
 
+    // async function fetchData() {
+    //     await axios
+    //     .get('https://project-2-api.herokuapp.com/videos?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+    //     .then((res) => {
+    //         let data= res.data;
+    //         setNextVideos(data)
+    //         if (!id) {
+    //             setCurrentVideoID(data[0].id)
+    //             axios
+    //             .get('https://project-2-api.herokuapp.com/videos/'+data[0].id+'?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+    //             .then((res)=> {
+    //                 console.log(res.data)
+    //                 setCurrentVideo(res.data)
+    //                 setCurrentComments(res.data.comments)
+    //             })
+    //         } else {
+    //             setCurrentVideoID(id)
+    //             axios
+    //             .get('https://project-2-api.herokuapp.com/videos/'+id+'?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+    //             .then((res)=> {
+    //                 console.log(res.data)
+    //                 setCurrentVideo(res.data)
+    //                 setCurrentComments(res.data.comments)
+    //             })
+    //         }
+    //     });
+    // }
     async function fetchData() {
         await axios
-        .get('https://project-2-api.herokuapp.com/videos?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+        .get('http://localhost:8080/data/videos')
         .then((res) => {
             let data= res.data;
             setNextVideos(data)
             if (!id) {
                 setCurrentVideoID(data[0].id)
                 axios
-                .get('https://project-2-api.herokuapp.com/videos/'+data[0].id+'?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+                .get('http://localhost:8080/data/videoData/'+data[0].id)
                 .then((res)=> {
                     console.log(res.data)
                     setCurrentVideo(res.data)
@@ -37,7 +64,7 @@ function HomePage() {
             } else {
                 setCurrentVideoID(id)
                 axios
-                .get('https://project-2-api.herokuapp.com/videos/'+id+'?api_key=339fbf44-caf6-4994-96e6-e0e59fbf51a2')
+                .get('http://localhost:8080/data/videoData/'+id)
                 .then((res)=> {
                     console.log(res.data)
                     setCurrentVideo(res.data)
@@ -46,6 +73,7 @@ function HomePage() {
             }
         });
     }
+
 
 function clickHandler(item) {
     setCurrentVideoID(item)
