@@ -24,7 +24,7 @@ function NextVideo(props) {
         </div>
         ))}
     </div>
-  );
+    );
 }
 
 export default NextVideo;
